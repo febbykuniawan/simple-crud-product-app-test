@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block header %}
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>CRUD Product</h1>
+                        <span class="subheading">A Simple CRUD Product</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                
+                {% for produk in object_list %}
+                    <div class="post-preview">
+                        <a href="">
+                            <h2 class="post-title">Nama Produk: {{ produk.nama_produk }}</h2>
+                            <h3 class="post-subtitle">Kategori: {{ produk.kategori_id }}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Harga: {{ produk.harga }}
+                        </p>
+                        <p class="post-meta">
+                            Status: {{ produk.status_id }}
+                        </p>
+                    </div>
+                    <hr class="my-4" />
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+{% endblock content %}
