@@ -19,7 +19,7 @@ Before you start, make sure you have the following installed:
     cd simple-crud-product-app-test
     ```
 
-**Build and Run the Docker Containers**
+2. **Build and Run the Docker Containers**
 
     ```bash
     docker-compose up --build
